@@ -7,3 +7,21 @@ body {
     font-family: 'Noto Sans KR',
     sans-serif;
 }
+
+.container {
+    margin-bottom: 500px;
+}
+
+.container h2 {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+}
+
+.common_inner {
+    width: 980px;
+    margin: 0 auto;
+
+    &.wide {
+        width: 1020px;
+    }
+}

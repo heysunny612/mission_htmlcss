@@ -1,0 +1,337 @@
+.category_area {
+    h2 {
+        position: relative;
+        padding: 20px 0 15px;
+        font-size: 28px;
+
+        em {
+            color: $txt-color3;
+        }
+
+        span {
+            position: absolute;
+            top: -3px;
+            left: 0;
+            font-size: 20px;
+        }
+    }
+
+    .category_article {
+        margin-bottom: 20px;
+
+        dl {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 603px;
+            border-bottom: 1px solid $bd-color5;
+
+            //타이틀
+            dt {
+                padding: 40px 0 0 15px;
+                width: 146px;
+                font-size: 30px;
+                font-weight: 500;
+                letter-spacing: -0.8px;
+
+                a {
+                    display: inline-block;
+                    padding-right: 12px;
+                    font-size: 12px;
+                    background: url(../assets/icon/angle-right-default.svg) no-repeat right 1px;
+                    color: $txt-color1;
+                }
+            }
+
+            //핫키워드
+            .hot_keyword {
+                position: absolute;
+                bottom: 22px;
+                left: 10px;
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                ul {
+                    margin-top: 10px;
+
+                    li {
+
+                        margin-top: 5px;
+
+                        a {
+                            display: inline-block;
+                            padding: 8px 10px;
+                            font-size: 13px;
+                            font-weight: lighter;
+                            border: 1px solid $bd-color6;
+                        }
+                    }
+                }
+            }
+
+
+            //프로모션
+            .promotion {
+                position: relative;
+                width: 326px;
+                overflow: hidden;
+                border-left: 1px solid $bd-color5;
+                border-right: 1px solid $bd-color5;
+
+                &:hover {
+                    .btn_indicator {
+                        display: block;
+                    }
+                }
+
+                .promotion_list {
+
+                    li {
+                        position: relative;
+                        height: 603px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .caption {
+                            position: absolute;
+                            left: 50%;
+                            bottom: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            width: 280px;
+                            height: 80px;
+                            transform: translateX(-50%);
+                            color: #fff;
+
+                            span {
+                                display: block;
+                                font-size: 12px;
+
+                                &.tit {
+                                    margin-bottom: 10px;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            //공통_인디케이터
+            .indicator {
+                position: absolute;
+                left: 50%;
+                bottom: 10px;
+                display: flex;
+                transform: translateX(-50%);
+
+                li {
+                    margin: 0 5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background-color: rgba($color: black, $alpha: 0.3);
+                    text-indent: -9999px;
+
+                    &.on {
+                        background-color: rgba($color: black, $alpha: 0.7);
+                    }
+
+                    a {
+                        display: block;
+                    }
+                }
+            }
+
+            //공통_인디케이터 왼쪽,오른쪽버튼
+            .btn_indicator {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                display: none;
+                z-index: 100;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        position: relative;
+                        text-indent: -9999px;
+
+
+                    }
+
+                    a {
+                        display: block;
+                        width: 30px;
+                        height: 50px;
+                        background-color: rgba($color: #000, $alpha: 0.5);
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 17px;
+                            left: 2px;
+                            width: 15px;
+                            height: 15px;
+                            border-top: 2px solid #fff;
+                            border-right: 2px solid #fff;
+                            transform: rotate(45deg);
+                            opacity: 0.9;
+                        }
+
+                        &.left:after {
+                            left: 12px;
+                            transform: rotate(225deg);
+                        }
+
+                        p {
+                            font-size: 24px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        //베스트 상품 
+        .best_product {
+            position: relative;
+            width: 548px;
+
+            &:hover {
+                .btn_indicator {
+                    display: block;
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 548px;
+                height: 1px;
+                background-color: $bd-color1;
+            }
+
+            .best_product_list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                li {
+                    padding-top: 15px;
+                    width: 160px;
+                    height: 301px;
+
+                    p {
+                        margin-top: 5px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #000;
+                        font-weight: lighter;
+
+                        &.wow_price {
+                            color: $txt-color5;
+                        }
+
+                        &.price {
+                            font-size: 14px;
+                            font-weight: 600;
+
+                            span {
+                                position: relative;
+                                top: 2px;
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+
+                    ;
+
+                    &:hover {
+                        .tit {
+                            text-decoration: underline;
+                            color: $txt-color3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//카테고리별 색상
+//여성패션
+.category_area .fashion {
+    border-top: 2px solid $bd-color4;
+
+    dt,
+    .hot_keyword a {
+        color: $txt-color4;
+    }
+
+    .hot_keyword a:hover {
+        background-color: $txt-color4;
+        color: #fff;
+    }
+
+    .caption {
+        background-color: rgba($color: $bd-color4, $alpha: 0.8);
+    }
+
+}
+
+//생활용품
+.category_area .daliyItem {
+    border-top: 2px solid $bd-color7;
+
+    dt,
+    .hot_keyword a {
+        color: $bd-color7;
+    }
+
+    .hot_keyword a:hover {
+        background-color: $bd-color7;
+        color: #fff;
+    }
+
+    .caption {
+        background-color: rgba($color: $bd-color7, $alpha: 0.8);
+    }
+
+}
+
+.category_area .digital {
+    border-top: 2px solid $bd-color8;
+
+    dt,
+    .hot_keyword a {
+        color: $bd-color8;
+    }
+
+    .hot_keyword a:hover {
+        background-color: $bd-color8;
+        color: #fff;
+    }
+
+    .caption {
+        background-color: rgba($color: $bd-color8, $alpha: 0.8);
+    }
+
+}
