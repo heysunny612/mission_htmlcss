@@ -167,17 +167,220 @@ body * {
 /* Theme 스타일 작성 */
 /* 페이지별 스타일 */
 /*---------------오늘의 발견---------------*/
-.header {
+header {
   border-top: 1px solid #cac6c3;
 }
-.header .header_bar {
+header .header_bar {
   height: 33px;
   background-color: #f0f0f0;
 }
-.header h1 {
+header .header_bar .header_menu {
+  display: flex;
+  justify-content: space-between;
+}
+header .header_bar .header_menu ul {
+  display: flex;
+  padding-left: 15px;
+  line-height: 33px;
+  font-size: 12px;
+}
+header .header_bar .header_menu ul li {
+  margin-right: 10px;
+}
+header .header_bar .header_menu ul li a {
+  color: #555555;
+}
+header .header_bar .header_menu h1 {
   margin: 30px 0;
 }
+header .header_area {
+  display: grid;
+  height: 115px;
+  grid-template-columns: 110px 1fr 120px;
+  grid-row: 40px 1fr;
+  grid-template-areas: "category logo_search my" "category menu menu";
+}
+header .button--category {
+  grid-area: category;
+  position: relative;
+  width: 110px;
+  height: 115px;
+  border: 0 none;
+  background: #3678ff url("../assets/icon/hamburger.svg") no-repeat 50% 40%;
+  text-align: center;
+}
+header .button--category span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 25px;
+  font-size: 13px;
+  color: #fff;
+}
+header .logo_area {
+  padding: 30px 30px 0;
+  grid-area: logo_search;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo_area .h1_logo {
+  width: 175px;
+  height: 40px;
+  background: url("../assets/logo/logo.svg") no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+}
+header .logo_area .search_box {
+  display: flex;
+  justify-content: space-between;
+  width: 490px;
+  height: 40px;
+  border: 2px solid #3678ff;
+}
+header .logo_area .search_box select {
+  width: 134px;
+}
+header .logo_area .search_box input {
+  width: 50%;
+  border: 0 none;
+}
+header .logo_area .search_box .btn {
+  padding-right: 15px;
+}
+header .logo_area .search_box .btn button {
+  width: 25px;
+  height: 100%;
+  text-indent: -9999px;
+  border: 0 none;
+}
+header .logo_area .search_box .btn button.voice {
+  background: url("../assets/icon/mic.svg") no-repeat center;
+}
+header .logo_area .search_box .btn button.search {
+  background: url("../assets/icon/search.svg") no-repeat center;
+}
+header .myCoupang_area {
+  grid-area: my;
+  position: relative;
+  top: -7px;
+}
+header .myCoupang_area .myCoupang_list {
+  display: flex;
+  padding-top: 20px;
+}
+header .myCoupang_area .myCoupang_list > li {
+  position: relative;
+}
+header .myCoupang_area .myCoupang_list > li.myCoupang {
+  background: url("../assets/icon/my-coupang.svg") no-repeat center;
+}
+header .myCoupang_area .myCoupang_list > li.myCoupang ul {
+  padding: 20px 0;
+  right: -15px;
+  width: 90px;
+}
+header .myCoupang_area .myCoupang_list > li.cart {
+  background: url("../assets/icon/cart.svg") no-repeat center;
+}
+header .myCoupang_area .myCoupang_list > li.cart p {
+  width: 300px;
+  height: 110px;
+  line-height: 110px;
+}
+header .myCoupang_area .myCoupang_list > li.cart .num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #3678ff;
+  font-size: 11px;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+}
+header .myCoupang_area .myCoupang_list > li > a {
+  display: block;
+  width: 60px;
+  height: 50px;
+  font-size: 13px;
+  text-align: center;
+  color: #000;
+}
+header .myCoupang_area .myCoupang_list > li > a span {
+  position: relative;
+  top: 50px;
+  width: 100%;
+}
+header .myCoupang_area .myCoupang_list > li:hover ul,
+header .myCoupang_area .myCoupang_list > li:hover p {
+  display: block !important;
+}
+header .myCoupang_area .myCoupang_list ul,
+header .myCoupang_area .myCoupang_list p {
+  display: none !important;
+  position: absolute;
+  top: 67px;
+  right: 0;
+  display: block;
+  background: #fff;
+  border: 1px solid #dddddd;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4);
+}
+header .myCoupang_area .myCoupang_list ul li,
+header .myCoupang_area .myCoupang_list p li {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+header .myCoupang_area .myCoupang_list ul li:last-child,
+header .myCoupang_area .myCoupang_list p li:last-child {
+  margin-bottom: 0;
+}
+header .myCoupang_area .myCoupang_list ul li a,
+header .myCoupang_area .myCoupang_list p li a {
+  color: #000;
+}
+header .myCoupang_area .myCoupang_list ul li a:hover,
+header .myCoupang_area .myCoupang_list p li a:hover {
+  color: #3678ff;
+  text-decoration: underline;
+}
+header .gnb_menu {
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+header .gnb_menu ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+header .gnb_menu ul li {
+  font-size: 13px;
+}
+header .gnb_menu ul li a {
+  color: #000;
+  font-weight: lighter;
+  line-height: 30px;
+}
+header .gnb_menu ul li a:hover {
+  color: #3678ff;
+  text-decoration: underline;
+}
 
+.main_slider {
+  margin-bottom: 40px;
+  height: 450px;
+  background: #fdfdfd url(../assets/main_slider.jpg) no-repeat top center;
+  background-size: cover;
+  border-top: 1px solid #dddddd;
+}
+
+/*---------------오늘의 발견---------------*/
 .discovery_area h2 {
   margin-bottom: 25px;
 }
