@@ -1,0 +1,106 @@
+/*---------------오늘의 쇼핑제안---------------*/
+.offer_area {
+    margin: 50px 0;
+
+    h2 {
+        padding-left: 35px;
+        font-size: 24px;
+        background: url("../assets/icon/shopping.svg") no-repeat left top;
+        letter-spacing: -0.8px;
+
+    }
+
+    //오퍼리스트
+    .offer_list {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+
+        li {
+            width: 20%;
+            position: relative;
+
+            p {
+                margin-top: 10px;
+                font-size: 13px;
+                color: #000;
+            }
+
+            .img {
+                display: flex;
+                justify-content: center;
+            }
+
+            .title {
+                width: 90%;
+                @include ellipse;
+            }
+
+            .sale {
+                position: absolute;
+                top: -10px;
+                left: 0px;
+                width: 40px;
+                height: 25px;
+                background-color: $bg-color3;
+                color: #fff;
+                font-size: 12px;
+                line-height: 25px;
+                text-align: center;
+            }
+
+            .delivery,
+            .score {
+                color: $txt-color1;
+
+            }
+
+            .score {
+                padding-left: 75px;
+                background-image: url(../assets/sprites/rating-stars.png);
+                background-repeat: no-repeat;
+            }
+
+            p[class*='star5'] {
+                background-position: left -14px;
+            }
+
+            p[class*='star10'] {
+                background-position: left -28px;
+            }
+
+            p[class*='star15'] {
+                background-position: left -42px;
+            }
+
+            p[class*='star20'] {
+                background-position: left -56px;
+            }
+
+            p[class*='star25'] {
+                background-position: left -70px;
+            }
+
+            p[class*='star30'] {
+                background-position: left -84px;
+            }
+
+            p[class*='star35'] {
+                background-position: left -98px;
+            }
+
+            p[class*='star40'] {
+                background-position: left -112px;
+            }
+
+            p[class*='star45'] {
+                background-position: left -126px;
+            }
+
+            p[class*='star50'] {
+                background-position: left -140px;
+            }
+        }
+    }
+}

@@ -134,6 +134,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* 공통 스타일 */
 /* Base 스타일 작성 */
 body {
@@ -162,32 +166,33 @@ body * {
   margin: 30px 0;
 }
 
-.discovery_list h2 {
+.discovery_area h2 {
   margin-bottom: 25px;
   font-size: 24px;
   letter-spacing: -0.8px;
 }
-.discovery_list h2 span {
+.discovery_area h2 span {
   position: relative;
   top: -3px;
   margin-left: 8px;
   font-size: 15px;
   color: #888888;
 }
-.discovery_list .banner_list {
+.discovery_area .discovery_list {
   margin: 0 auto;
-  padding: 0 14px;
+  padding: 10px 14px 0;
   border: 1px solid #d6d6d6;
 }
-.discovery_list .banner_list:after {
+.discovery_area .discovery_list:after {
   content: "";
   display: block;
   clear: both;
 }
-.discovery_list .banner_list li {
+.discovery_area .discovery_list li {
   position: relative;
   display: flex;
-  margin: 10px 10px 0 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   float: left;
@@ -195,19 +200,17 @@ body * {
   height: 300px;
   border: 1px solid #d6d6d6;
 }
-.discovery_list .banner_list li:first-child, .discovery_list .banner_list li:nth-of-type(2) {
+.discovery_area .discovery_list li:first-child, .discovery_area .discovery_list li:nth-of-type(2) {
   width: 470px;
   height: 300px;
 }
-.discovery_list .banner_list li:nth-of-type(2), .discovery_list .banner_list li:last-child {
+.discovery_area .discovery_list li:nth-of-type(2), .discovery_area .discovery_list li:last-child {
   margin-right: 0;
 }
-.discovery_list .banner_list li a:hover,
-.discovery_list .banner_list li a:focus {
+.discovery_area .discovery_list li:hover, .discovery_area .discovery_list li:focus {
   border-color: #0096e4;
 }
-.discovery_list .banner_list li a:hover span,
-.discovery_list .banner_list li a:focus span {
+.discovery_area .discovery_list li:hover span, .discovery_area .discovery_list li:focus span {
   background-color: #4285f4;
   opacity: 1;
   width: 99px;
@@ -218,18 +221,16 @@ body * {
   font-family: "돋움";
   transition: width 0.3s;
 }
-.discovery_list .banner_list li a:hover span::before,
-.discovery_list .banner_list li a:focus span::before {
+.discovery_area .discovery_list li:hover span::before, .discovery_area .discovery_list li:focus span::before {
   content: "구매하기 >";
 }
-.discovery_list .banner_list li a:hover::after,
-.discovery_list .banner_list li a:focus::after {
+.discovery_area .discovery_list li:hover a::after, .discovery_area .discovery_list li:focus a::after {
   display: none;
 }
-.discovery_list .banner_list li a {
+.discovery_area .discovery_list li a {
   display: block;
 }
-.discovery_list .banner_list li a span {
+.discovery_area .discovery_list li a span {
   display: block;
   position: absolute;
   bottom: 19px;
@@ -239,7 +240,7 @@ body * {
   opacity: 0.2;
   background-color: black;
 }
-.discovery_list .banner_list li a::after {
+.discovery_area .discovery_list li a::after {
   content: "";
   position: absolute;
   bottom: 35px;
@@ -250,4 +251,90 @@ body * {
   border-right: 1px solid #fff;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+/*---------------오늘의 쇼핑제안---------------*/
+.offer_area {
+  margin: 50px 0;
+}
+.offer_area h2 {
+  padding-left: 35px;
+  font-size: 24px;
+  background: url("../assets/icon/shopping.svg") no-repeat left top;
+  letter-spacing: -0.8px;
+}
+.offer_area .offer_list {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.offer_area .offer_list li {
+  width: 20%;
+  position: relative;
+}
+.offer_area .offer_list li p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #000;
+}
+.offer_area .offer_list li .img {
+  display: flex;
+  justify-content: center;
+}
+.offer_area .offer_list li .title {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.offer_area .offer_list li .sale {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 40px;
+  height: 25px;
+  background-color: #e5232f;
+  color: #fff;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+}
+.offer_area .offer_list li .delivery,
+.offer_area .offer_list li .score {
+  color: #888888;
+}
+.offer_area .offer_list li .score {
+  padding-left: 75px;
+  background-image: url(../assets/sprites/rating-stars.png);
+  background-repeat: no-repeat;
+}
+.offer_area .offer_list li p[class*=star5] {
+  background-position: left -14px;
+}
+.offer_area .offer_list li p[class*=star10] {
+  background-position: left -28px;
+}
+.offer_area .offer_list li p[class*=star15] {
+  background-position: left -42px;
+}
+.offer_area .offer_list li p[class*=star20] {
+  background-position: left -56px;
+}
+.offer_area .offer_list li p[class*=star25] {
+  background-position: left -70px;
+}
+.offer_area .offer_list li p[class*=star30] {
+  background-position: left -84px;
+}
+.offer_area .offer_list li p[class*=star35] {
+  background-position: left -98px;
+}
+.offer_area .offer_list li p[class*=star40] {
+  background-position: left -112px;
+}
+.offer_area .offer_list li p[class*=star45] {
+  background-position: left -126px;
+}
+.offer_area .offer_list li p[class*=star50] {
+  background-position: left -140px;
 }
