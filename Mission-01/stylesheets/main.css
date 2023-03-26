@@ -165,6 +165,91 @@ body * {
 }
 
 /* Theme 스타일 작성 */
+@font-face {
+  font-family: "icomoon";
+  src: url("../assets/fonts/icomoon.eot?8hd0q3");
+  src: url("../assets/fonts/icomoon.eot?8hd0q3#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.ttf?8hd0q3") format("truetype"), url("../assets/fonts/icomoon.woff?8hd0q3") format("woff"), url("../assets/fonts/icomoon.svg?8hd0q3#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-appliances:before {
+  content: "\e900";
+}
+
+.icon-baby:before {
+  content: "\e901";
+}
+
+.icon-beauty:before {
+  content: "\e902";
+}
+
+.icon-book:before {
+  content: "\e903";
+}
+
+.icon-car:before {
+  content: "\e904";
+}
+
+.icon-clothes:before {
+  content: "\e905";
+}
+
+.icon-foods:before {
+  content: "\e906";
+}
+
+.icon-houseware:before {
+  content: "\e907";
+}
+
+.icon-interior:before {
+  content: "\e908";
+}
+
+.icon-kitchenware:before {
+  content: "\e909";
+}
+
+.icon-pet:before {
+  content: "\e90a";
+}
+
+.icon-sports:before {
+  content: "\e90b";
+}
+
+.icon-stationery:before {
+  content: "\e90c";
+}
+
+.icon-theme:before {
+  content: "\e90d";
+}
+
+.icon-toy:before {
+  content: "\e90e";
+}
+
+.icon-travel:before {
+  content: "\e90f";
+}
+
 /* 페이지별 스타일 */
 /*---------------오늘의 발견---------------*/
 header {
@@ -200,8 +285,10 @@ header .header_area {
   grid-row: 40px 1fr;
   grid-template-areas: "category logo_search my" "category menu menu";
 }
-header .button--category {
+header .header_area .header_category {
   grid-area: category;
+}
+header .header_area .header_category .button--category {
   position: relative;
   width: 110px;
   height: 115px;
@@ -209,13 +296,88 @@ header .button--category {
   background: #3678ff url("../assets/icon/hamburger.svg") no-repeat 50% 40%;
   text-align: center;
 }
-header .button--category span {
+header .header_area .header_category .button--category span {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: 25px;
   font-size: 13px;
   color: #fff;
+}
+header .header_area .navigation {
+  position: relative;
+  display: none;
+  z-index: 999;
+}
+header .header_area .navigation.is--active {
+  display: block;
+}
+header .header_area .navigation ul {
+  position: relative;
+  padding: 10px 20px;
+  width: 165px;
+  height: 535px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+}
+header .header_area .navigation ul i {
+  position: relative;
+  padding-right: 5px;
+  top: 5px;
+  font-size: 20px;
+}
+header .header_area .navigation ul.depth1 {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+header .header_area .navigation ul ul {
+  position: absolute;
+  top: -1px;
+  left: 163px;
+  display: none;
+}
+header .header_area .navigation ul ul.depth2 {
+  width: 590px;
+  z-index: -11;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+header .header_area .navigation ul ul.depth2 .right_link {
+  position: absolute;
+  left: 88px;
+  top: 120px;
+}
+header .header_area .navigation ul ul.depth2 .right_link a {
+  display: block;
+}
+header .header_area .navigation ul ul.depth3 {
+  z-index: 9999;
+  width: 200px;
+  border-right: 0 none;
+  background-color: transparent !important;
+}
+header .header_area .navigation ul ul.depth3 a {
+  background-image: none !important;
+}
+header .header_area .navigation ul ul.is--active {
+  display: block;
+}
+header .header_area .navigation ul a {
+  display: block;
+  width: 123px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #555555;
+}
+header .header_area .navigation ul a:hover, header .header_area .navigation ul a.is--active {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3678ff;
+  background-image: url(../assets/icon/more-right-active.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+header .header_area .navigation ul a.depth1_list:hover, header .header_area .navigation ul a.depth1_list.is--active {
+  text-decoration: none !important;
 }
 header .logo_area {
   padding: 30px 30px 0;
