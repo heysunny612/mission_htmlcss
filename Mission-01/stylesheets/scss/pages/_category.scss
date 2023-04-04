@@ -261,7 +261,10 @@
                         }
                     }
 
-                    ;
+                    p.tit {
+                        height:32px;
+                        overflow: hidden;
+                    }
 
                     &:hover {
                         .tit {

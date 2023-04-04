@@ -1,8 +1,13 @@
-@mixin floatClear {
-    content: '';
-    display: block;
-    clear: both;
-}
+@mixin clearfix {
+    &:before,  
+    &:after {  
+      content: " ";  
+      display: table;  
+    }  
+    &:after {  
+      clear: both;  
+    }  
+  }
 
 @mixin ellipse {
     text-overflow: ellipsis;
@@ -19,4 +24,15 @@
     -webkit-line-clamp: &lines;
     -webkit-box-orient: vertical;
     /* autoprefixer:off */
+}
+
+@mixin sr-only{
+    position: absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    border:0;
+    clip:rect(0,0,0,0);
 }

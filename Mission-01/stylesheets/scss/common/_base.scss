@@ -25,3 +25,15 @@ body {
         width: 1020px;
     }
 }
+
+//스크린 리더만 읽을 수 있게
+.sr-only{
+    position: absolute;
+    overflow:hidden;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    border:0;
+    clip:rect(0,0,0,0);
+}
