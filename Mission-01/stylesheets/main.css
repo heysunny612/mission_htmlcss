@@ -1104,7 +1104,7 @@ i {
 }
 .footer .certification_list {
   padding: 27px;
-  border-top: 1px solid red;
+  border-top: 1px solid #DCDCDC;
 }
 .footer .certification_list ul {
   display: flex;
